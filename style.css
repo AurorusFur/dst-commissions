@@ -154,3 +154,10 @@ a:visited{
 #container h2:hover{
     cursor: pointer;
 }
+
+.sale{
+    color: red !important;
+    text-decoration: line-through;
+    font-size: 18px !important;
+    padding-left: 5px;
+}
