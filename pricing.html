@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap&subset=latin-ext" rel="stylesheet">
+    <title>Aurorus Commisions</title>
+</head>
+<body onload="langLoad()">
+    <div id="header">
+        <div id="h-left">
+            <a href="">Aurorus Commissions</a>
+        </div>
+        <div id="h-right">
+            <li><a href="index.html">Postacie</a></li>
+            <li><a onclick="langChange()">ENG</a></li>
+        </div>
+    </div>
+    <div id="container">
+    </div>
+
+    <script>
+        var lang = 0;
+        var langPL = `        
+        <div class="space" style="width: 100%; height: 16px;"></div>
+        <h1>Cennik</h1>
+        <a>Podstawowa Postać = 140zł/40$</a>
+        <br>
+        <a>-sprite postaci</a>
+        <br>
+        <a>-portret postaci</a>
+        <br>
+        <a>Portowanie postaci z DST do DS 20zł/5$</a>
+        <br>
+        <a>Itemy</a>
+        <br>
+        <a>- 1 customowe jedzonko 15zł/5$</a>
+        <br>
+        <a>- 1 przedmiot do trzymania w dłoni 30zł/10$</a>
+        <br>
+        <a>- 1 broń biała 25zł/10$</a>
+        <br>
+        <a>Umiejętność Specjalna 50zł/15$</a>
+        <br>
+        <a>Własne dialogi (Musisz wysłać dialogi) 80zł/25$</a>
+        <br>
+        <a>Akceptowane Metody Płatności</a>
+        <br>
+        <a>-PaySafeCard</a>`;
+
+        var langENG = `        
+        <div class="space" style="width: 100%; height: 16px;"></div>
+        <h1>Pricing</h1>
+        <a>Base Character = 140zł/40$</a>
+        <br>
+        <a>-character sprite</a>
+        <br>
+        <a>-character portret</a>
+        <br>
+        <a>Character Port DST to DS 20zł/5$</a>
+        <br>
+        <a>Items</a>
+        <br>
+        <a>- 1 Custom Food 15zł/5$</a>
+        <br>
+        <a>- 1 Hand Item 30zł/10$</a>
+        <br>
+        <a>- 1 Melee Weapon 25zł/10$</a>
+        <br>
+        <a>Special Ability 50zł/15$</a>
+        <br>
+        <a>Custom speech file (You need give me dialogs file) 80zł/25$</a>
+        <br>
+        <a>Accepted Payment Methods</a>
+        <br>
+        <a>-PaySafeCard</a>`;
+        
+        function langChange(){
+            if(lang == 1){
+                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Characters</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("container").innerHTML = langENG;
+                lang = 0;
+            }
+            else{
+                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Postacie</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("container").innerHTML = langPL;
+                lang = 1;
+            }
+        }
+
+        function langLoad(){
+            if(lang == 1){
+                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Characters</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("container").innerHTML = langENG;
+            }
+            else{
+                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Postacie</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("container").innerHTML = langPL;
+            }
+        }
+    </script>
+</body>
+</html>
