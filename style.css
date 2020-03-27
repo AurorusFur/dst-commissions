@@ -1,163 +1,607 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Baloo Da 2', cursive;
+@media screen and (min-width: 1006px){
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Baloo Da 2', cursive;
+    }
+    
+    body{
+        background-image: url("background.png");
+        background-size: contain;
+    }
+    
+    img{
+        color: white;
+    }
+    
+    a:link{
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:visited{
+        color: white;
+    }
+    
+    #header{
+        width: 100%;
+        height: 48px;
+        background: #000;
+    }
+    
+    #h-left{
+        float: left;
+        display: table;
+        height: 100%;
+        width: 222px;
+        padding-left: 16px;
+    }
+    
+    #h-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    #h-right{
+        float: right;
+        width: 260px;
+        height: 100%;
+    }
+
+    #menu-button{
+        width: 48px;
+        height: 48px;
+        display: none;
+    }
+
+    #bar{
+        background-color: white;
+        width: 100%;
+        height: 10px;
+    }
+
+    #menu{
+        width: 100%;
+        height: 180px;
+        background-color: rgb(37, 37, 37);
+        position: absolute;
+        display: none;
+    }
+
+    .menu-option-button{
+        width: 80%;
+        height: 64px;
+        background-color: black;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        display: table;
+    }
+
+    .menu-option-button a{
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        font-size: 32px;
+    }
+    
+    #h-right li{
+        float: left;
+        list-style: none;
+        height: 100%;
+        width: 100px;
+        display: table;
+    }
+    
+    #h-right li a{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        color: white;
+    }
+    
+    #h-right li a:hover{
+        background-color: rgb(65, 65, 65);
+        cursor: pointer;
+    }
+    
+    #container{
+        width: 100%;
+        height: 610px;
+        text-align: center;
+    }
+    
+    #container a{
+        color: white;
+        font-size: 22px;
+    }
+    
+    #slider{
+        height: 80%;
+        width: 980px;
+        margin: auto;
+        border: 2px solid white;
+    }
+    
+    #s-left{
+        float: left;
+        width: 64px;
+        height: 100%;
+        border-right: 2px solid white;
+        display: table;
+    }
+    
+    #s-center{
+        float: left;
+        width: 848px;
+        height: 100%;
+    }
+    
+    #s-center img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #s-right{
+        float: right;
+        width: 64px;
+        height: 100%;
+        border-left: 2px solid white;
+        display: table;
+    }
+    
+    #s-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-right a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-left:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #s-right:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #container h1{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2:hover{
+        cursor: pointer;
+    }
+    
+    .sale{
+        color: red !important;
+        text-decoration: line-through;
+        font-size: 18px !important;
+        padding-left: 5px;
+    }
 }
 
-body{
-    background-image: url("background.png");
-    background-size: cover;
+@media screen and (max-width: 1005px){
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Baloo Da 2', cursive;
+    }
+    
+    body{
+        background-image: url("background.png");
+        background-size: cover;
+    }
+    
+    img{
+        color: white;
+    }
+    
+    a:link{
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:visited{
+        color: white;
+    }
+    
+    #header{
+        width: 100%;
+        height: 48px;
+        background: #000;
+    }
+    
+    #h-left{
+        float: left;
+        display: table;
+        height: 100%;
+        width: 222px;
+        padding-left: 16px;
+    }
+    
+    #h-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    #h-right{
+        float: right;
+        width: 260px;
+        height: 100%;
+    }
+
+    #menu-button{
+        width: 48px;
+        height: 48px;
+        display: none;
+    }
+
+    #bar{
+        background-color: white;
+        width: 100%;
+        height: 10px;
+    }
+
+    #menu{
+        width: 100%;
+        height: 180px;
+        background-color: rgb(37, 37, 37);
+        position: absolute;
+        display: none;
+    }
+
+    .menu-option-button{
+        width: 80%;
+        height: 64px;
+        background-color: black;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        display: table;
+    }
+
+    .menu-option-button a{
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        font-size: 32px;
+    }
+    
+    #h-right li{
+        float: left;
+        list-style: none;
+        height: 100%;
+        width: 100px;
+        display: table;
+    }
+    
+    #h-right li a{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        color: white;
+    }
+    
+    #h-right li a:hover{
+        background-color: rgb(65, 65, 65);
+        cursor: pointer;
+    }
+    
+    #container{
+        width: 100%;
+        height: 610px;
+        text-align: center;
+    }
+    
+    #container a{
+        color: white;
+        font-size: 22px;
+    }
+    
+    #slider{
+        height: 80%;
+        width: 90%;
+        margin: auto;
+        border: 2px solid white;
+    }
+    
+    #s-left{
+        float: left;
+        width: 4.5%;
+        height: 100%;
+        border-right: 2px solid white;
+        display: table;
+    }
+    
+    #s-center{
+        float: left;
+        width: 90%;
+        height: 100%;
+    }
+    
+    #s-center img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #s-right{
+        float: right;
+        width: 4.5%;
+        height: 100%;
+        border-left: 2px solid white;
+        display: table;
+    }
+    
+    #s-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-right a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-left:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #s-right:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #container h1{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2:hover{
+        cursor: pointer;
+    }
+    
+    .sale{
+        color: red !important;
+        text-decoration: line-through;
+        font-size: 18px !important;
+        padding-left: 5px;
+    }
 }
 
-img{
-    color: white;
-}
+@media screen and (max-width: 740px){
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Baloo Da 2', cursive;
+    }
+    
+    body{
+        background-image: url("background.png");
+        background-size: cover;
+    }
+    
+    img{
+        color: white;
+    }
+    
+    a:link{
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:visited{
+        color: white;
+    }
+    
+    #header{
+        width: 100%;
+        height: 48px;
+        background: #000;
+    }
+    
+    #h-left{
+        float: left;
+        display: table;
+        height: 100%;
+        width: 222px;
+        padding-left: 16px;
+    }
+    
+    #h-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    #h-right{
+        float: right;
+        width: 60px;
+        height: 100%;
+    }
 
-a:link{
-    text-decoration: none;
-    color: white;
-}
+    #menu-button{
+        width: 48px;
+        height: 48px;
+        display: block;
+        float: right;
+    }
 
-a:visited{
-    color: white;
-}
+    #bar{
+        background-color: white;
+        width: 80%;
+        height: 5px;
+        margin-top: 7.5px;
+        display: block;
+    }
 
-#header{
-    width: 100%;
-    height: 48px;
-    background: #000;
-}
+    #menu{
+        width: 100%;
+        height: 180px;
+        background-color: rgb(37, 37, 37);
+        position: absolute;
+        display: none;
+    }
 
-#h-left{
-    float: left;
-    display: table;
-    height: 100%;
-    width: 222px;
-    padding-left: 16px;
-}
+    .menu-option-button{
+        width: 80%;
+        height: 64px;
+        background-color: black;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        display: table;
+    }
 
-#h-left a{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 22px;
-}
-
-#h-right{
-    float: right;
-    width: 330px;
-    height: 100%;
-}
-
-#h-right li{
-    float: left;
-    list-style: none;
-    height: 100%;
-    width: 100px;
-    display: table;
-}
-
-#h-right li a{
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-    color: white;
-}
-
-#h-right li a:hover{
-    background-color: rgb(65, 65, 65);
-    cursor: pointer;
-}
-
-#container{
-    width: 100%;
-    height: 610px;
-    text-align: center;
-}
-
-#container a{
-    color: white;
-    font-size: 22px;
-}
-
-#slider{
-    height: 80%;
-    width: 980px;
-    margin: auto;
-    border: 2px solid white;
-}
-
-#s-left{
-    float: left;
-    width: 64px;
-    height: 100%;
-    border-right: 2px solid white;
-    display: table;
-}
-
-#s-center{
-    float: left;
-    width: 848px;
-    height: 100%;
-}
-
-#s-center img{
-    width: 100%;
-    height: 100%;
-}
-
-#s-right{
-    float: right;
-    width: 64px;
-    height: 100%;
-    border-left: 2px solid white;
-    display: table;
-}
-
-#s-left a{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: white;
-    font-size: 32px;
-}
-
-#s-right a{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: white;
-    font-size: 32px;
-}
-
-#s-left:hover{
-    background-color: rgba(255, 255, 255, 0.397);
-    cursor: pointer;
-}
-
-#s-right:hover{
-    background-color: rgba(255, 255, 255, 0.397);
-    cursor: pointer;
-}
-
-#container h1{
-    text-align: center;
-    color: white;
-}
-
-#container h2{
-    text-align: center;
-    color: white;
-}
-
-#container h2:hover{
-    cursor: pointer;
-}
-
-.sale{
-    color: red !important;
-    text-decoration: line-through;
-    font-size: 18px !important;
-    padding-left: 5px;
+    .menu-option-button a{
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        font-size: 32px;
+    }
+    
+    #h-right li{
+        display: none;
+    }
+    
+    #h-right li a{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        color: white;
+    }
+    
+    #h-right li a:hover{
+        background-color: rgb(65, 65, 65);
+        cursor: pointer;
+    }
+    
+    #container{
+        width: 100%;
+        height: 610px;
+        text-align: center;
+    }
+    
+    #container a{
+        color: white;
+        font-size: 22px;
+    }
+    
+    #slider{
+        height: 80%;
+        width: 90%;
+        margin: auto;
+        border: 2px solid white;
+    }
+    
+    #s-left{
+        float: left;
+        width: 4.5%;
+        height: 100%;
+        border-right: 2px solid white;
+        display: table;
+    }
+    
+    #s-center{
+        float: left;
+        width: 90%;
+        height: 100%;
+    }
+    
+    #s-center img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #s-right{
+        float: right;
+        width: 4.5%;
+        height: 100%;
+        border-left: 2px solid white;
+        display: table;
+    }
+    
+    #s-left a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-right a{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #s-left:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #s-right:hover{
+        background-color: rgba(255, 255, 255, 0.397);
+        cursor: pointer;
+    }
+    
+    #container h1{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2{
+        text-align: center;
+        color: white;
+    }
+    
+    #container h2:hover{
+        cursor: pointer;
+    }
+    
+    .sale{
+        color: red !important;
+        text-decoration: line-through;
+        font-size: 18px !important;
+        padding-left: 5px;
+    }
 }

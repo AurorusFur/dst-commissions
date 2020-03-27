@@ -15,6 +15,22 @@
         <div id="h-right">
             <li><a href="pricing.html">Cennik</a></li>
             <li><a onclick="langChange()">ENG</a></li>
+            <div id="menu-button">
+                <span id="bar">
+                </span>
+                <span id="bar">
+                </span>
+                <span id="bar">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="menu-option-button">
+            <a href="pricing.html">Cennik</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()">ENG</a>
         </div>
     </div>
     <div id="container">
@@ -23,6 +39,7 @@
     <script>
         var photo = 0;
         var lang = localStorage.getItem("lang");
+        var show = 0;
 
         var langPL = `
         <div class="space" style="width: 100%; height: 16px;"></div>
@@ -56,15 +73,65 @@
         </div>
         <h2 id="full-size">Full Size</h2>`
         
+        var MenuLangPL = 
+        `<li>
+            <a href="pricing.html">Cennik</a>
+        </li> 
+        <li>
+            <a onclick="langChange()">ENG</a>
+        </li>
+        <div id="menu-button" onclick="menu()">
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+        </div>`
+
+        var MenuLangENG =
+        `<li>
+            <a href="pricing.html">Pricing</a>
+        </li> 
+        <li>
+            <a onclick="langChange()">PL</a>
+        </li>
+        <div id="menu-button" onclick="menu()">
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+        </div>`
+
+        var MenuConLangPL = 
+        `<div class="menu-option-button">
+            <a href="pricing.html">Cennik</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()" href="">ENG</a>
+        </div>`
+
+        var MenuConLangENG = 
+        `<div class="menu-option-button">
+            <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()" href="">PL</a>
+        </div>`
+        
         function langChange(){
             if(lang == 0){
-                document.getElementById("h-right").innerHTML = '<li><a href="pricing.html">Pricing</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangENG;
+                document.getElementById("menu").innerHTML = MenuConLangENG;
                 document.getElementById("container").innerHTML = langENG;
                 lang = 1;
                 localStorage.setItem("lang", lang);
             }
             else{
-                document.getElementById("h-right").innerHTML = '<li><a href="pricing.html">Cennik</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangPL;
+                document.getElementById("menu").innerHTML = MenuConLangPL;
                 document.getElementById("container").innerHTML = langPL;
                 lang = 0;
                 localStorage.setItem("lang", lang);
@@ -74,13 +141,14 @@
         }
 
         function langLoad(){
-            console.log(lang);
             if(lang == 0){
-                document.getElementById("h-right").innerHTML = '<li><a href="pricing.html">Pricing</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangENG;
+                document.getElementById("menu").innerHTML = MenuConLangENG;
                 document.getElementById("container").innerHTML = langENG;
             }
             else{
-                document.getElementById("h-right").innerHTML = '<li><a href="pricing.html">Cennik</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangPL;
+                document.getElementById("menu").innerHTML = MenuConLangPL;
                 document.getElementById("container").innerHTML = langPL;
             }
 
@@ -96,13 +164,26 @@
             });
 
             document.getElementById("s-right").addEventListener("click",function(){
-                photo += 1;
-                document.getElementById("s-center").innerHTML = '<img src="img/photo-' + photo +'.jpg" alt="Twoja Przeglądarka nie obsługuje zdjęć">'
+                if(photo < 7){
+                    photo += 1;
+                    document.getElementById("s-center").innerHTML = '<img src="img/photo-' + photo +'.jpg" alt="Twoja Przeglądarka nie obsługuje zdjęć">'
+                }
             });
 
             document.getElementById("full-size").addEventListener("click",function(){
                 window.open("img/photo-"+ photo + ".jpg");
             });
+        }
+
+        function menu(){
+            if(show == 0){
+                document.getElementById("menu").style.display = "block";
+                show = 1;
+            }
+            else{
+                document.getElementById("menu").style.display = "none";
+                show = 0;
+            }
         }
     </script>
 </body>

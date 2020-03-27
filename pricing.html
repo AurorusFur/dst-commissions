@@ -17,11 +17,20 @@
             <li><a onclick="langChange()">ENG</a></li>
         </div>
     </div>
+    <div id="menu">
+        <div class="menu-option-button">
+            <a href="index.html">Postacie</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()">ENG</a>
+        </div>
+    </div>
     <div id="container">
     </div>
 
     <script>
         var lang = localStorage.getItem("lang");
+        var show = 0;
         var langPL = `        
         <div class="space" style="width: 100%; height: 16px;"></div>
         <h1>Cennik</h1>
@@ -79,16 +88,66 @@
         <a>-PaySafeCard</a>
         <br>
         <a>advance payment 50% of commission</a>`;
+
+        var MenuLangPL = 
+        `<li>
+            <a href="index.html">Postacie</a>
+        </li> 
+        <li>
+            <a onclick="langChange()">ENG</a>
+        </li>
+        <div id="menu-button" onclick="menu()">
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+        </div>`
+
+        var MenuLangENG =
+        `<li>
+            <a href="index.html">Characters</a>
+        </li> 
+        <li>
+            <a onclick="langChange()">PL</a>
+        </li>
+        <div id="menu-button" onclick="menu()">
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+            <span id="bar">
+            </span>
+        </div>`
+
+        var MenuConLangPL = 
+        `<div class="menu-option-button">
+            <a href="index.html">Postacie</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()" href="">ENG</a>
+        </div>`
+
+        var MenuConLangENG = 
+        `<div class="menu-option-button">
+            <a href="index.html">Characters</a>
+        </div>
+        <div class="menu-option-button">
+            <a onclick="langChange()" href="">PL</a>
+        </div>`
         
         function langChange(){
             if(lang == 0){
-                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Postacie</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangPL;
+                document.getElementById("menu").innerHTML = MenuConLangPL;
                 document.getElementById("container").innerHTML = langPL;
                 lang = 1;
                 localStorage.setItem("lang", lang);
             }
             else{
-                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Characters</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangENG;
+                document.getElementById("menu").innerHTML = MenuConLangENG;
                 document.getElementById("container").innerHTML = langENG;
                 lang = 0;
                 localStorage.setItem("lang", lang);
@@ -98,12 +157,25 @@
         function langLoad(){
             console.log(lang);
             if(lang == 1){
-                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Postacie</a></li> <li><a onclick="langChange()">ENG</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangPL;
+                document.getElementById("menu").innerHTML = MenuConLangPL;
                 document.getElementById("container").innerHTML = langPL;
             }
             else{
-                document.getElementById("h-right").innerHTML = '<li><a href="index.html">Characters</a></li> <li><a onclick="langChange()">PL</a></li>';
+                document.getElementById("h-right").innerHTML = MenuLangENG;
+                document.getElementById("menu").innerHTML = MenuConLangENG;
                 document.getElementById("container").innerHTML = langENG;
+            }
+        }
+
+        function menu(){
+            if(show == 0){
+                document.getElementById("menu").style.display = "block";
+                show = 1;
+            }
+            else{
+                document.getElementById("menu").style.display = "none";
+                show = 0;
             }
         }
     </script>
