@@ -210,7 +210,7 @@
                 }
                 else{
                     document.getElementById("container").innerHTML = langMobilePL;
-                    for(var i = 0; i<8; i++){
+                    for(var i = 0; i<11; i++){
                         document.getElementById("container").innerHTML += '<img src="img/photo-' + i +'.jpg" alt="Twoja Przeglądarka nie obsługuje zdjęć">';
                     }
                 }
@@ -228,7 +228,7 @@
             });
 
             document.getElementById("s-right").addEventListener("click",function(){
-                if(photo < 7){
+                if(photo < 10){
                     photo += 1;
                     document.getElementById("s-center").innerHTML = '<img src="img/photo-' + photo +'.jpg" alt="Twoja Przeglądarka nie obsługuje zdjęć">'
                 }
