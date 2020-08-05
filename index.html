@@ -42,13 +42,18 @@
     </div>
     <div id="contact">
         <p>Contact</p>
-        <p>Discord: Aurorus#0669</p>
+        <div id="discord">
+            <img src="img/icons/Discord-Logo-White.svg">
+            <a>Aurorus#0669</a>
+        </div>
     </div>
     <div id="reader">
-        <span id="close-reader">X</span>
         <div id="reader-photo">
 
         </div>
+    </div>
+    <div id="black">
+
     </div>
 </body>
 <script>
@@ -63,8 +68,10 @@
         for(var i = 0; i<characterPhotos.length; i++){
             characterPhotos[i].addEventListener("click", function(){            
                 var windowWidth = window.innerWidth;
-                if(windowWidth > 950)
+                if(windowWidth > 950){
                     document.getElementById("reader").style.top = "100px";
+                    document.getElementById("black").style.visibility = "visible";
+                }
                 else
                     window.open(this.getAttribute('src'));
                 document.getElementById("reader-photo").innerHTML = `<img src="`+this.getAttribute('src')+`">`;
@@ -73,8 +80,9 @@
     }
 
     function reader(){
-        document.getElementById("close-reader").addEventListener("click", function(){
+        document.getElementById("black").addEventListener("click", function(){
             document.getElementById("reader").style.top = "-600px";
+            document.getElementById("black").style.visibility = "hidden";
         });
     }
 </script>
