@@ -87,7 +87,7 @@ body {
   position: absolute;
   left: 35%;
   top: 30%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-15deg);
 }
 
 #portrait2 {
@@ -102,7 +102,7 @@ body {
   position: absolute;
   left: 65%;
   top: 30%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(15deg);
 }
 
 #portrait1:hover {
@@ -169,6 +169,17 @@ body {
   z-index: 2;
 }
 
+#banner {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 0, 0.25);
+  text-align: center;
+}
+
+#banner p:first-child {
+  font-size: 22px;
+}
+
 @media screen and (max-width: 530px) {
   #logo {
     width: 512px;
@@ -228,7 +239,7 @@ body {
     left: 35%;
     top: 30%;
     width: 75%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(-15deg);
   }
   #portrait2 {
     position: absolute;
@@ -243,7 +254,7 @@ body {
     left: 65%;
     top: 30%;
     width: 75%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(15deg);
   }
   #portrait1:hover {
     z-index: 2;
