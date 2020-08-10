@@ -159,6 +159,52 @@ body {
   transform: translateY(-50%);
 }
 
+#donate p {
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  top: 650px;
+}
+
+#kofi {
+  position: relative;
+  width: 512px;
+  height: 128px;
+  background-color: #29abe0;
+  border-radius: 12px;
+  top: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+
+#kofi img {
+  width: 96px;
+  height: 96px;
+  margin-left: 32px;
+  margin-top: 16px;
+  margin-right: 10px;
+}
+
+#kofi a {
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#kofi:hover {
+  background-color: #37b0e0;
+  cursor: pointer;
+}
+
+#redirection-kofi {
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 #black {
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -298,6 +344,36 @@ body {
   }
   #discord a {
     font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #donate p {
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    top: 380px;
+  }
+  #kofi {
+    position: relative;
+    width: 256px;
+    height: 64px;
+    background-color: #29abe0;
+    border-radius: 12px;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 12px;
+  }
+  #kofi img {
+    width: 32px;
+    height: 32px;
+    margin-left: 32px;
+    margin-top: 16px;
+    margin-right: 10px;
+  }
+  #kofi a {
+    font-size: 16px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
