@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet"> 
+    <title>Aurorus'es DST Commissions</title>
+    <link rel="icon" href="img/Crystal Avatar.png">
+</head>
+<body onload="characters(), reader()">
+    <div id="logo">
+        <img src="img/logo bg/logo bg 512x128.png">
+        <p>Aurorus'es Don't Starve Characters</p>
+    </div>
+    <div id="characters">
+        <p>Characters</p>
+        <div id="photos-characters">
+            
+        </div>
+    </div>
+    <div id="portraits">
+        <p>Portraits</p>
+        <img src="img/portraits/crystal.png" alt="" id="portrait1">
+        <img src="img/portraits/tox.png" alt="" id="portrait2">
+        <img src="img/portraits/pysiek.png" alt="" id="portrait3">
+    </div>
+    <div id="pricing">
+        <p>Pricing</p>
+        <p>Base Character = 30zł/10$</p>
+        <p>-character sprite</p>
+        <p>-character portret</p>
+        <p>Character Port DST to DS 20zł/5$</p>
+        <p>Items</p>
+        <p>- 1 Custom Food 5zł/1$</p>
+        <p>- 1 Hand Item 15zł/5$</p>
+        <p>- 1 Melee Weapon 25zł/10$</p>
+        <p>Special Ability 20zł/5$</p>
+        <p>Custom speech file (You need give me dialogs file) 40zł/15$</p>
+        <p>Accepted Payment Methods</p>
+        <p>-PaySafeCard</p>
+        <!--<p>-PayPal [Soon]</p>-->
+        <p>advance payment 50% of commission</p>
+    </div>
+    <div id="contact">
+        <p>Contact</p>
+        <div id="discord">
+            <img src="img/icons/Discord-Logo-White.svg">
+            <a>Aurorus#0669</a>
+        </div>
+    </div>
+    <div id="reader">
+        <div id="reader-photo">
+
+        </div>
+    </div>
+    <div id="black">
+
+    </div>
+</body>
+<script>
+    function characters(){
+
+        var characterPhotos = document.getElementsByClassName("character-photo"); 
+
+        for(var i = 0; i<9; i++){
+            document.getElementById("photos-characters").innerHTML += `<img src="img/character photos/photo-`+i+`.jpg" alt="Character photo" class="character-photo">`
+        }
+
+        for(var i = 0; i<characterPhotos.length; i++){
+            characterPhotos[i].addEventListener("click", function(){            
+                var windowWidth = window.innerWidth;
+                if(windowWidth > 950){
+                    document.getElementById("reader").style.top = "100px";
+                    document.getElementById("black").style.visibility = "visible";
+                }
+                else
+                    window.open(this.getAttribute('src'));
+                document.getElementById("reader-photo").innerHTML = `<img src="`+this.getAttribute('src')+`">`;
+            })
+        }
+    }
+
+    function reader(){
+        document.getElementById("black").addEventListener("click", function(){
+            document.getElementById("reader").style.top = "-600px";
+            document.getElementById("black").style.visibility = "hidden";
+        });
+    }
+</script>
+</html>
